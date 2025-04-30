@@ -1,4 +1,4 @@
-package EJERCICIO.Ejercicio345;
+package EJERCICIO.Ejercicio3456;
 
 // Esta clase representa un nodo generico para nuestra lista enlazada
 class Node<T> {
