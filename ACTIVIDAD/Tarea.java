@@ -12,7 +12,7 @@ public class Tarea {
         this.prioridad = prioridad;  // Y también la prioridad que nos digan
     }
 
-    // Estos métodos se llaman getters -> nos permiten leer los datos guardados
+    // Estos metodos se llaman getters -> nos permiten leer los datos guardados
     public String getNombre() {
         return nombre;
     }
@@ -21,9 +21,35 @@ public class Tarea {
         return prioridad;
     }
 
-    // Este método es TOSTRING -> para imprimir bonito una tarea
+    // Este metodo es TOSTRING -> para imprimir bonito una tarea
     
     public String toString() {
         return "Tarea: " + nombre + " (Prioridad: " + prioridad + ")";
     }
-}
+        // Este metodo se usa para comparar si dos tareas son iguales
+        // Lo usamos en métodos como eliminarTarea o contieneTarea
+        
+        public boolean equals(Object obj) {
+            // Si ambas referencias son la misma tarea exacta, retornamos true al instante
+            if (this == obj) return true;
+
+            // Si el objeto que nos pasan es null o no es una instancia de Tarea, no son iguales
+            if (obj == null || getClass() != obj.getClass()) return false;
+
+            // Convertimos el objeto a tipo Tarea para poder comparar sus atributos
+            Tarea tarea = (Tarea) obj;
+
+            // Comparamos nombre y prioridad -> si ambos coinciden, las tareas se consideran iguales
+            return prioridad == tarea.prioridad && nombre.equals(tarea.nombre);
+        }
+
+        // Este metodo genera un codigo hash para la tarea
+        // Es util para que Java sepa como ubicarla en listas, sets, etc.
+        
+        public int hashCode() {
+            // Usamos el hash del nombre y le sumamos la prioridad para crear un código único
+            return nombre.hashCode() + prioridad;
+        }
+
+    }
+

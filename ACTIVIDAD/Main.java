@@ -9,6 +9,8 @@ public class Main {
         gestor.agregarTarea(new Tarea("Entregar proyecto", 2));
         gestor.agregarTarea(new Tarea("Estudiar para el examen", 1));
         gestor.agregarTarea(new Tarea("Ir al gimnasio", 5));
+        gestor.agregarTarea(new Tarea("Preparar almuerzo", 3));
+
 
         // 3. Eliminar alguna tarea
         gestor.eliminarTarea(new Tarea("Ir al gimnasio", 5)); // (Necesitariamos definir equals en Tarea para que funcione perfecto, te explico luego si quieres)

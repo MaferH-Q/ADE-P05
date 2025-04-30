@@ -1,6 +1,6 @@
 package EJERCICIO.Ejercicio345;
 
-public class Ejercicio5 {
+public class Ejercicio56 {
     public static void main(String[] args) {
         // Creamos dos listas iguales
         Node<String> lista1 = null;
